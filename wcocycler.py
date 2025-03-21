@@ -25,23 +25,16 @@ class Function:
         run.cursloc()
         
         
-        pyautogui.click(x=self.xcor,  y=self.ycor, button='left')
-        time.sleep(1)
 
         count = countset
         page_number = int(page_number)
         for i in range(page_number):
             if count <= page_number: 
-                pyautogui.moveTo(x=1185, y=178)
-                time.sleep(2)
-                pyautogui.leftClick()
-                pyautogui.scroll(-700)
-                #test next ep location
-                #break
                 
                 #video CLick
-                pyautogui.moveTo(x=845, y=251)
+                pyautogui.moveTo(x=3564, y=645)
                 pyautogui.leftClick()
+                time.sleep(2)
                 pyautogui.rightClick()
 
                 time.sleep(1)
@@ -50,9 +43,21 @@ class Function:
                 pyautogui.press('down')
                 pyautogui.press('down')
                 pyautogui.press('down')
+                pyautogui.press('down')
+                pyautogui.press('down')
+                pyautogui.press('down')
+                pyautogui.press('down')
+                pyautogui.press('down')
+                pyautogui.press('down')
+                
+                pyautogui.press('right')
 
 
-                time.sleep(3)
+                pyautogui.press('down')
+                pyautogui.press('down')
+                pyautogui.press('down')
+                pyautogui.press('down')
+
                 pyautogui.press('enter')
 
                 time.sleep(3)
@@ -74,8 +79,6 @@ class Function:
 
                 time.sleep(1)
 #next ep click
-                pyautogui.click(x=1131, y=571, button='left')
-                time.sleep(3)
 
             else:
                 print('borked')
@@ -88,3 +91,5 @@ start = input('Begin? (y/n): ')
 if start == 'y':
     run = Function()
     run.loop()
+else:
+    print(pyautogui.position())
